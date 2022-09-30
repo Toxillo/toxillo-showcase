@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Toxillo Showcase`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.toxillo.com`
   },
   plugins: [{
     resolve: 'gatsby-plugin-google-analytics',

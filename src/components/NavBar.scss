@@ -13,7 +13,7 @@ ul {
 }
 
 .main-nav__item {
-    color: #fff;
+    color: $on-primary;
     width: 100%;
     text-align: center;
 
@@ -23,12 +23,7 @@ ul {
     }
 
     a {
-        font-family: $font-stack;
-        font-size: 2em;
-        font-weight: 100;
         display: block;
-        text-decoration: none;
-        color: #eee;
         padding: $header-padding;
     }
 }
