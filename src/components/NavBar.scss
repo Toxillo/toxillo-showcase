@@ -1,9 +1,4 @@
-$font-stack: 'Roboto', sans-serif;
-
-body {
-    background-color: black;
-    margin: 0;
-}
+@import '../utilities/variables';
 
 ul {
     padding: 0;
@@ -12,28 +7,28 @@ ul {
 
 .main-nav__items {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     list-style: none;
 }
 
 .main-nav__item {
-    width: 100%;
-    height: 100%;
-    padding: 16px 0;
     color: #fff;
+    width: 100%;
     text-align: center;
-    font-family: $font-stack;
-    font-size: 2em;
-    font-weight: 100;
 
     &:hover {
-        background-color: #222;
+        background-color: rgba(90, 0, 0, 0.403);
         transition: background-color 200ms linear;
     }
 
     a {
+        font-family: $font-stack;
+        font-size: 2em;
+        font-weight: 100;
+        display: block;
         text-decoration: none;
         color: #eee;
+        padding: $header-padding;
     }
 }

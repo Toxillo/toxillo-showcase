@@ -1,0 +1,48 @@
+@import '../utilities/variables';
+
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: $h1-size;
+    margin: 0;
+}
+
+body {
+    font-family: $font-stack;
+    color: $on-primary;
+    background-color: black;
+    margin: 0;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 90%;
+    padding-top: 3em;
+}
+
+.hero {
+    font-family: 'Noto Serif JP', serif;
+
+    p {
+        margin-top: 1em;
+        padding-right: 2em;
+        font-size: 1.5em;
+    }
+}
+
+.hero__graphic-container {
+    display: flex;
+    height: 555px;
+    width: 555px;
+
+    .gatsby-image-wrapper {
+        border-radius: 10px;
+    }
+}
