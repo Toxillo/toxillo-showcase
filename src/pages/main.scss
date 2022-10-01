@@ -40,7 +40,7 @@ h2 {
 
 
 .gatsby-image-wrapper {
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .hero-container {
@@ -65,7 +65,8 @@ h2 {
 .hero-graphic-container {
     display: flex;
     height: 350px;
-    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
 }
 
 .tile-container {
@@ -86,9 +87,21 @@ h2 {
 }
 
 @media (min-width: 1024px) {
+    .hero-section {
+        margin-top: 1.5em;
+    }
     .hero-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .tile-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .tile {
+        width: 300px;
     }
 }

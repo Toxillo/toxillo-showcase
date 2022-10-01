@@ -26,7 +26,7 @@ const IndexPage = () => {
           <div className='hero-graphic-container'>
             <StaticImage
               className='hero-graphic'
-              alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
+              alt="Orb"
               src="../images/square.jpg"
             />
           </div>
@@ -36,7 +36,11 @@ const IndexPage = () => {
         <h1>Projects</h1>
         <div className='tile-container'>
           <Tile dest="404" platform="Android" title="Vocab Trainer"></Tile>
-          {/* <Tile dest="404" platform="iOS" title="Scrabble Online" img="../images/scrabble.png" img_alt="Screenshot of Scrabble Clone"></Tile> */}
+          <Tile dest="404" platform="iOS" title="Scrabble Online"></Tile>
+          <Tile dest="404" platform="iOS" title="Scrabble Online"></Tile>
+          <Tile dest="404" platform="iOS" title="Scrabble Online"></Tile>
+          <Tile dest="404" platform="iOS" title="Scrabble Online"></Tile>
+          <Tile dest="404" platform="iOS" title="Scrabble Online"></Tile>
         </div>
       </section>
     </>
