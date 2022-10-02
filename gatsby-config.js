@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Toxillo Showcase | Work in Progress`,
+    title: `Work in Progress`,
     siteUrl: `https://www.toxillo.com`
   },
   plugins: [{
@@ -21,6 +21,12 @@ module.exports = {
     },
     __key: "images"
   }, {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: `blog`,
+      path: `${__dirname}/blog`,
+    }
+  }, {
     resolve: `gatsby-omni-font-loader`,
     options: {
       enableListener: true,
@@ -36,5 +42,5 @@ module.exports = {
         }
       ],
     },
-  }, "gatsby-plugin-sass"]
+  }, "gatsby-plugin-sass", "gatsby-plugin-mdx"]
 };

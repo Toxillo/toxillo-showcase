@@ -1,10 +1,11 @@
 import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import './main.scss'
 import Header from '../components/Header'
 import NavBar from '../components/NavBar'
 import Tile from '../components/Tile'
+import Seo from '../components/Seo'
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -29,7 +30,7 @@ const IndexPage = () => {
               Hi, I'm Leon.
             </h1>
             <p className='hero-text'>
-              I study, I learn, I do stuff that excites me
+              I am working on this site right now
               <br></br>
               {data.site.siteMetadata.title}
             </p>
@@ -51,13 +52,12 @@ const IndexPage = () => {
           <Tile dest="404" platform="iOS" title="Scrabble Online"></Tile>
           <Tile dest="404" platform="iOS" title="Scrabble Online"></Tile>
           <Tile dest="404" platform="iOS" title="Scrabble Online"></Tile>
-          <Tile dest="404" platform="iOS" title="Scrabble Online"></Tile>
         </div>
       </section>
     </>
   )
 }
 
-export const Head = () => <title>Toxillo | Work in Progress</title>
+export const Head = () => <Seo title="Toxillo"></Seo>
 
 export default IndexPage
