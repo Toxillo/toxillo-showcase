@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Toxillo Showcase`,
+    title: `Toxillo Showcase | Work in Progress`,
     siteUrl: `https://www.toxillo.com`
   },
   plugins: [{

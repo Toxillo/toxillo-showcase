@@ -1,12 +1,21 @@
 import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import './main.scss'
 import Header from '../components/Header'
 import NavBar from '../components/NavBar'
 import Tile from '../components/Tile'
 
 const IndexPage = () => {
-
+  const data = useStaticQuery(graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+  `)
   return (
     <>
       <Header>
@@ -21,6 +30,8 @@ const IndexPage = () => {
             </h1>
             <p className='hero-text'>
               I study, I learn, I do stuff that excites me
+              <br></br>
+              {data.site.siteMetadata.title}
             </p>
           </div>
           <div className='hero-graphic-container'>
