@@ -7,13 +7,13 @@ const NavBar = () => {
         <nav className="main-nav">
             <ul className="main-nav__items">
                 <li id="main-nav__heading" className="main-nav__item">
-                    <Link to="404">Me</Link>
+                    <Link to="#">Me</Link>
                 </li>
                 <li className="main-nav__item">
                     <Link to="404">About</Link>
                 </li>
                 <li className="main-nav__item">
-                    <Link to="blog">Projects</Link>
+                    <Link to="#projects">Projects</Link>
                 </li>
                 <li className="main-nav__item">
                     <Link to="404">Contact</Link>

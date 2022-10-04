@@ -38,6 +38,23 @@ h2 {
     margin-bottom: 1em;
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    margin: 20px 0;
+    background-color: black;
+    border-right: 5px rgba(0, 0, 0, 0) solid;
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #460000;
+    border-right: 5px rgba(0, 0, 0, 0) solid;
+    background-clip: padding-box;
+}
+
 
 .gatsby-image-wrapper {
     border-radius: 10px
@@ -98,10 +115,11 @@ h2 {
 
     .tile-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 2em;
     }
 
     .tile {
-        width: 300px;
+        width: 100%;
     }
 }

@@ -17,13 +17,18 @@ ul {
     width: 100%;
     text-align: center;
 
-    &:hover {
-        background-color: rgba(90, 0, 0, 0.403);
-        transition: background-color 200ms linear;
-    }
-
     a {
         display: block;
         padding: $header-padding;
     }
+
+    &:hover {
+        background-color: $secondary;
+        transition: background-color 200ms linear;
+    }
+
+    &:focus-visible {
+        outline: none;
+    }
+
 }

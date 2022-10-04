@@ -1,15 +1,35 @@
-import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
+import { graphql, Link, useStaticQuery} from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import * as React from 'react'
 
-const Tile = ({ dest, platform, title, img, img_alt }) => {
+const Tile = () => {
+
+    const data = useStaticQuery(graphql`
+    query ($id: String) {
+        mdx(id: {eq: $id}) {
+            frontmatter {
+                date(formatString: "dddd, MMMM Do YYYY")
+                slug
+                title
+                preview_image_alt
+                platform
+                preview_image {
+                childImageSharp {
+                    gatsbyImageData
+                }
+                }
+            }
+            id
+        }
+    }`)
+
+    const image = getImage(data.mdx.frontmatter.preview_image)
     return (
-        <Link className='tile' to={dest}>
-            <span>{platform}</span>
-            <h2>{title}</h2>
+        <Link className='tile' to={"projects/" + data.mdx.frontmatter.slug}>
+            <span>{data.mdx.frontmatter.platform}</span>
+            <h2>{data.mdx.frontmatter.title}</h2>
             <div className='tile-graphic-container'>
-                <StaticImage className='tile-graphic' src="../images/homeScreen.png" alt="Screenshot of Vocab Trainer app"
-                />
+                <GatsbyImage image={image} alt={data.mdx.frontmatter.preview_image_alt} />
             </div>
         </Link>
     )

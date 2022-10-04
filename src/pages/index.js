@@ -2,10 +2,9 @@ import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 import './main.scss'
-import Header from '../components/Header'
-import NavBar from '../components/NavBar'
 import Tile from '../components/Tile'
 import Seo from '../components/Seo'
+import Layout from '../components/Layout'
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -15,14 +14,15 @@ const IndexPage = () => {
         title
       }
     }
+    allMdx {
+      nodes {
+        id
+      }
+    }
   }
   `)
   return (
-    <>
-      <Header>
-        <NavBar>
-        </NavBar>
-      </Header>
+    <Layout>
       <section className='hero-section'>
         <div className='hero-container'>
           <div className='hero'>
@@ -31,8 +31,6 @@ const IndexPage = () => {
             </h1>
             <p className='hero-text'>
               I am working on this site right now
-              <br></br>
-              {data.site.siteMetadata.title}
             </p>
           </div>
           <div className='hero-graphic-container'>
@@ -44,17 +42,17 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section id='projects'>
         <h1>Projects</h1>
         <div className='tile-container'>
-          <Tile dest="404" platform="Android" title="Vocab Trainer"></Tile>
-          <Tile dest="404" platform="iOS" title="Scrabble Online"></Tile>
-          <Tile dest="404" platform="iOS" title="Scrabble Online"></Tile>
-          <Tile dest="404" platform="iOS" title="Scrabble Online"></Tile>
-          <Tile dest="404" platform="iOS" title="Scrabble Online"></Tile>
+          {
+            data.allMdx.nodes.map((node, index) => (
+              <Tile key={index}></Tile>
+            ))
+          }
         </div>
       </section>
-    </>
+    </Layout>
   )
 }
 
