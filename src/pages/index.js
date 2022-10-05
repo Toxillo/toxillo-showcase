@@ -16,11 +16,21 @@ const IndexPage = () => {
     }
     allMdx {
       nodes {
-        id
+        frontmatter {
+          date(formatString: "dddd, MMMM Do YYYY")
+          slug
+          title
+          preview_image_alt
+          platform
+          preview_image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
       }
+      id
     }
-  }
-  `)
+  }}`)
   return (
     <Layout>
       <section className='hero-section'>
@@ -47,7 +57,7 @@ const IndexPage = () => {
         <div className='tile-container'>
           {
             data.allMdx.nodes.map((node, index) => (
-              <Tile key={index}></Tile>
+              <Tile key={index} data={node.frontmatter}></Tile>
             ))
           }
         </div>
