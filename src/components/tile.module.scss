@@ -1,0 +1,16 @@
+.tile {
+    background: linear-gradient(#e66465, #9198e5);
+    padding: 1em 2em 3em;
+    border-radius: 10px;
+}
+
+.tile-graphic-container {
+    border-radius: 10px;
+}
+
+
+@media (min-width: 1024px) {
+    .tile {
+        width: 100%;
+    }
+}

@@ -1,21 +1,21 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
-import './NavBar.scss'
+import { mainNavItems, mainNavItem } from './navbar.module.scss'
 
 const NavBar = () => {
     return (
-        <nav className="main-nav">
-            <ul className="main-nav__items">
-                <li id="main-nav__heading" className="main-nav__item">
-                    <Link to="#">Me</Link>
+        <nav>
+            <ul className={mainNavItems}>
+                <li id="main-nav-heading" className={mainNavItem}>
+                    <Link to="/">Me</Link>
                 </li>
-                <li className="main-nav__item">
+                <li className={mainNavItem}>
                     <Link to="404">About</Link>
                 </li>
-                <li className="main-nav__item">
+                <li className={mainNavItem}>
                     <Link to="#projects">Projects</Link>
                 </li>
-                <li className="main-nav__item">
+                <li className={mainNavItem}>
                     <Link to="404">Contact</Link>
                 </li>
             </ul>

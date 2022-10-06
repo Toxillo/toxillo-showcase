@@ -56,9 +56,6 @@ h2 {
 }
 
 
-.gatsby-image-wrapper {
-    border-radius: 10px
-}
 
 .hero-container {
     margin: 0 auto;
@@ -86,6 +83,11 @@ h2 {
     border-radius: 10px;
 }
 
+
+.hero-graphic {
+    border-radius: 10px
+}
+
 .tile-container {
     display: flex;
     flex-direction: column;
@@ -93,15 +95,6 @@ h2 {
     margin: 0em auto;
 }
 
-.tile {
-    background: linear-gradient(#e66465, #9198e5);
-    padding: 1em 2em 3em;
-    border-radius: 10px;
-}
-
-.tile-graphic-container a {
-    border-radius: 10px;
-}
 
 @media (min-width: 1024px) {
     .hero-section {
@@ -117,9 +110,5 @@ h2 {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 2em;
-    }
-
-    .tile {
-        width: 100%;
     }
 }

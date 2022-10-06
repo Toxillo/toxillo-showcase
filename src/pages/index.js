@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
-import './main.scss'
+import { heroSection, heroContainer, hero, heroTitle, heroGraphicContainer, heroGraphic, tileContainer} from './main.module.scss'
 import Tile from '../components/Tile'
 import Seo from '../components/Seo'
 import Layout from '../components/Layout'
@@ -33,19 +33,19 @@ const IndexPage = () => {
   }}`)
   return (
     <Layout>
-      <section className='hero-section'>
-        <div className='hero-container'>
-          <div className='hero'>
-            <h1 className='hero-title'>
+      <section className={heroSection}>
+        <div className={heroContainer}>
+          <div className={hero}>
+            <h1 className={heroTitle}>
               Hi, I'm Leon.
             </h1>
-            <p className='hero-text'>
+            <p>
               I am working on this site right now
             </p>
           </div>
-          <div className='hero-graphic-container'>
+          <div className={heroGraphicContainer}>
             <StaticImage
-              className='hero-graphic'
+              className={heroGraphic}
               alt="Orb"
               src="../images/square.jpg"
             />
@@ -54,7 +54,7 @@ const IndexPage = () => {
       </section>
       <section id='projects'>
         <h1>Projects</h1>
-        <div className='tile-container'>
+        <div className={tileContainer}>
           {
             data.allMdx.nodes.map((node, index) => (
               <Tile key={index} data={node.frontmatter}></Tile>

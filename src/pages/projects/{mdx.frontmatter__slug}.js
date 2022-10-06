@@ -1,13 +1,15 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
+import { mainContent } from './projects.module.scss'
 import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
 
 const BlogPost = ({ data, children }) => {
     return (
         <Layout pageTitle={data.mdx.frontmatter.title}>
-            <p>{data.mdx.frontmatter.date}</p>
+          <div className={mainContent}>
             {children}
+          </div>
         </Layout>
     )
 }

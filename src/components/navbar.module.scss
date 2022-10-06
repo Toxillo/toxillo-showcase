@@ -5,14 +5,14 @@ ul {
     margin: 0;
 }
 
-.main-nav__items {
+.main-nav-items {
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
 }
 
-.main-nav__item {
+.main-nav-item {
     color: $on-primary;
     width: 100%;
     text-align: center;

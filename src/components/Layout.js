@@ -5,7 +5,7 @@ import Header from '../components/Header'
 const Layout = ({ pageTitle, children }) => {
     if (pageTitle == null) {
         return (
-            <div>
+            <div className='layout'>
                 <Header>
                     <NavBar>
                     </NavBar>
@@ -16,13 +16,12 @@ const Layout = ({ pageTitle, children }) => {
             </div>
         )
     } else return (
-        <div>
+        <div className='layout'>
             <Header>
                 <NavBar>
                 </NavBar>
             </Header>
             <main>
-                <h1>{pageTitle}</h1>
                 {children}
             </main>
         </div>
