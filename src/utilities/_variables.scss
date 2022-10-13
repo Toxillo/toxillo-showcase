@@ -1,6 +1,6 @@
 //Fonts
 $font-stack: 'Roboto', sans-serif;
-$h1-size: 3.5em;
+$h1-size: 3em;
 $link-size: 1em;
 $text-size: 1.2em;
 
@@ -11,5 +11,10 @@ $header-padding: 2em 0;
 
 $header-padding-large: 0.7em;
 //Colors
-$secondary: #300000;
+$background: #f8fffc;
+$on-background: #111;
+$secondary: #defff0;
 $on-primary: #fff;
+
+//Other
+$shadow: 0px 0px 20px black;

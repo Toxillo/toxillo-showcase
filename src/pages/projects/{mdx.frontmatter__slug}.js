@@ -3,15 +3,22 @@ import { graphql } from 'gatsby'
 import { mainContent } from './projects.module.scss'
 import Seo from '../../components/Seo'
 import Layout from '../../components/Layout'
+import { MDXProvider } from '@mdx-js/react'
+import { MDXImage } from '../../components/MDXComponents.js'
+
+const shortcodes = { MDXImage }
 
 const BlogPost = ({ data, children }) => {
-    return (
-        <Layout pageTitle={data.mdx.frontmatter.title}>
-          <div className={mainContent}>
-            {children}
-          </div>
-        </Layout>
-    )
+  return (
+    <Layout>
+      <div className={mainContent}>
+        <h1>{data.mdx.frontmatter.title}</h1>
+        <MDXProvider components={shortcodes}>
+          {children}
+        </MDXProvider>
+      </div>
+    </Layout>
+  )
 }
 
 export const query = graphql`

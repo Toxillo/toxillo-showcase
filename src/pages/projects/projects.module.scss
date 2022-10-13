@@ -1,5 +1,14 @@
 @import '../../utilities/variables';
 
-.main-content {
-    margin: 0 1em;
+img {
+    border-radius: 10px;
 }
+
+.main-content {
+    margin: 0 auto;
+    width: 90%;
+    h1 {
+        margin: 0;
+    }
+}
+

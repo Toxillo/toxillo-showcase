@@ -1,10 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import './main.module.scss'
+import Layout from '../components/Layout'
+
 
 const pageStyles = {
   color: "#aaa",
-  padding: "96px",
+  padding: "1em",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 const headingStyles = {
@@ -27,15 +29,17 @@ const linkStyles = {
 
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry, this page isn't available right now as the site is still in development
-        <br />
-        <br />
-        <Link style={linkStyles} to="/">Go home</Link>
-      </p>
-    </main>
+    <Layout>
+      <div style={pageStyles}>
+        <h1 style={headingStyles}>Page not found</h1>
+        <p style={paragraphStyles}>
+          Sorry, this page isn't available right now as the site is still in development
+          <br />
+          <br />
+          <Link style={linkStyles} to="/">Go home</Link>
+        </p>
+      </div>
+    </Layout>
   )
 }
 

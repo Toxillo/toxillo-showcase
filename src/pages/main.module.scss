@@ -3,13 +3,15 @@
 
 * {
     box-sizing: border-box;
+    color: #111;
 }
 
 body {
     font-family: $font-stack;
     color: $on-primary;
-    background-color: black;
+    background-color: $background;
     margin: 0 auto;
+    padding-bottom: 1em;
 }
 
 section {
@@ -22,10 +24,11 @@ a {
     font-size: $link-size;
     font-weight: 300;
     text-decoration: none;
-    color: #eee;
+    color: $on-background;
 }
 
 h1, h2 {
+    color: $on-background;
     margin: 0 0 0.8em;
 }
 
@@ -36,6 +39,10 @@ h1 {
 
 h2 {
     margin-bottom: 1em;
+}
+
+p {
+    line-height: 20px;
 }
 
 ::-webkit-scrollbar {
@@ -81,6 +88,7 @@ h2 {
     height: 350px;
     max-width: 600px;
     border-radius: 10px;
+    box-shadow: $shadow;
 }
 
 
