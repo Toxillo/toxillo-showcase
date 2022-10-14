@@ -66,7 +66,9 @@ const IndexPage = () => {
       <section id="about">
         <h1>About</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, possimus voluptate! Aliquid dolorum amet quis quos rerum voluptatem culpa animi. Pariatur iure quo fuga minima sequi dolores ex laborum accusantium.
+          I'm a student at the Technical University in Munich studying Games Engineering. While games are my passion, I also enjoy
+          web and mobile app development. I built this site to have a central place to showcase my finished projects,
+          what I'm working on and how to contact me, but also to learn more about building complex websites.
         </p>
       </section>
       <section id="contact">

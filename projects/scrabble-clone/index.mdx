@@ -6,9 +6,25 @@ platform: "Web"
 preview_image: "./scrabble.png"
 preview_image_alt: "The Scrabble Online playing field"
 ---
-## [Check it out on Github](https://github.com/xZylote/Scrabble)
+### [Check it out on Github](https://github.com/xZylote/Scrabble)
 
 
 <MDXImage>![Test](./scrabble.png)</MDXImage>
 
-This is an implementation of the classic Scrabble game based on JavaScript and NodeJs. It enables playing over the internet with friends. 
+This is an implementation of the classic Scrabble game based on JavaScript and NodeJs. It enables playing over the internet with friends.
+
+## Motivation
+
+During the pandemic it has been difficult to meet up with friends to play board games. A workaround is to do these sessions online but we
+soon noticed that there aren't any viable options to play Scrabble. So we built one ourselves...
+
+## Frontend
+
+The frontend is build in classic HTML, JavaScript and CSS. It's kept simple yet offers all the functionality in a clear way.
+The underlying structure is provided by a grid into which the components such as the letters, the board, the chat and the 
+controls are placed into.
+
+## Backend
+
+The backend is provided by a NodeJs server. It waits for connections, notifies the players for changes and game events and enables 
+communication between the players via the chat.
