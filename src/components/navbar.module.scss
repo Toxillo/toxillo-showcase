@@ -16,6 +16,9 @@ ul {
     color: $on-primary;
     width: 100%;
     text-align: center;
+    margin: 0 1em;
+    border-bottom: 1px solid transparent;
+
 
     a {
         display: block;
@@ -23,12 +26,19 @@ ul {
     }
 
     &:hover {
-        background-color: $secondary;
-        transition: background-color 200ms linear;
+        // background-color: $secondary;
+        border-bottom: 1px solid #8b2ab4;
+        transition: border-bottom 200ms linear;
     }
 
     &:focus-visible {
         outline: none;
     }
 
+}
+
+@media (min-width: 1024px) {
+    header {
+        margin-bottom: 2em;
+    }
 }

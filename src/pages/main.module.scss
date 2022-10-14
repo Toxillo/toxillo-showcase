@@ -4,6 +4,7 @@
 * {
     box-sizing: border-box;
     color: #111;
+    text-align: center;
 }
 
 body {
@@ -33,16 +34,23 @@ h1, h2 {
 }
 
 h1 {
+    font-family: 'Noto Serif JP', serif;
     font-weight: 700;
     font-size: $h1-size;
 }
 
 h2 {
     margin-bottom: 1em;
+    font-family: $font-stack;
+    font-size: $h2-size;
 }
 
 p {
-    line-height: 20px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: $text-size;
+    line-height: $text-size + 0.2em;
+    text-align: center;
+    padding: 0 3em;
 }
 
 ::-webkit-scrollbar {
@@ -62,8 +70,6 @@ p {
     background-clip: padding-box;
 }
 
-
-
 .hero-container {
     margin: 0 auto;
 }
@@ -72,15 +78,16 @@ p {
     font-family: 'Noto Serif JP', serif;
 
     p {
-        font-family: $font-stack;
         margin-top: 1em;
-        padding-right: 2em;
-        font-size: $text-size;
     }
 }
 
 .hero-title {
     margin: 0
+}
+
+.hero-subtitle {
+    font-family: $font-stack;
 }
 
 .hero-graphic-container {
@@ -102,11 +109,43 @@ p {
     gap: 3em;
     margin: 0em auto;
 }
+.icon {
+    height: 32px;
+}
+
+.button-container {
+    background-color: aquamarine;
+    border-radius: 10px;
+    display: flex;
+    gap: 2em;
+    padding: 1em;
+    padding-left: 4em;
+    margin-bottom: 1em;    
+    align-items: center;
+    
+    img {
+        height: 32px;
+        border-radius: 0;
+    }   
+}
+
+.button-link {
+    font-family: $font-stack;
+    font-size: $link-size-btn;
+    font-weight: 300;
+    text-decoration: none;
+    color: $on-background;
+}
+
 
 
 @media (min-width: 1024px) {
-    .hero-section {
-        margin-top: 1.5em;
+    h1 {
+        font-size: $h1-size-large;
+    }
+
+    p {
+        font-size: $text-size-large;
     }
     .hero-container {
         display: flex;
