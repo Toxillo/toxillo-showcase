@@ -27,7 +27,7 @@ ul {
 
     &:hover {
         // background-color: $secondary;
-        border-bottom: 1px solid #8b2ab4;
+        border-bottom: 1px solid $accents;
         transition: border-bottom 200ms linear;
     }
 

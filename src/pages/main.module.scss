@@ -54,24 +54,27 @@ p {
 }
 
 ::-webkit-scrollbar {
-    width: 7px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
     margin: 20px 0;
     background-color: black;
-    border-right: 5px rgba(0, 0, 0, 0) solid;
+    border-right: 4px rgba(0, 0, 0, 0) solid;
     background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #460000;
-    border-right: 5px rgba(0, 0, 0, 0) solid;
+    background-color: aquamarine;
+    border-right: 4px rgba(0, 0, 0, 0) solid;
     background-clip: padding-box;
 }
 
 .hero-container {
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero {
@@ -113,6 +116,12 @@ p {
     height: 32px;
 }
 
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
 .button-container {
     background-color: aquamarine;
     border-radius: 10px;
@@ -120,7 +129,6 @@ p {
     gap: 2em;
     padding: 1em;
     padding-left: 4em;
-    margin-bottom: 1em;    
     align-items: center;
     
     img {
@@ -147,8 +155,21 @@ p {
     p {
         font-size: $text-size-large;
     }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        border-right: 6px rgba(0, 0, 0, 0) solid;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-right: 6px rgba(0, 0, 0, 0) solid;
+    }
+
     .hero-container {
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
@@ -157,5 +178,17 @@ p {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 2em;
+    }
+
+    .button-container {
+        padding: 1em;
+        width: 100%;
+        justify-content: space-evenly;
+        gap: 0;
+    }
+
+    .buttons-container {
+        flex-direction: row;
+        justify-content: center;
     }
 }

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
-import { heroContainer, hero, heroTitle, heroGraphicContainer, heroGraphic, tileContainer, buttonContainer, icon, buttonLink, heroSubtitle } from './main.module.scss'
+import { heroContainer, hero, heroTitle, heroGraphicContainer, heroGraphic, tileContainer, buttonsContainer, buttonContainer, icon, buttonLink, heroSubtitle } from './main.module.scss'
 import Tile from '../components/Tile'
 import Seo from '../components/Seo'
 import Layout from '../components/Layout'
@@ -71,6 +71,7 @@ const IndexPage = () => {
       </section>
       <section id="contact">
         <h1>Contact</h1>
+        <div className={buttonsContainer}>
         <a className={buttonContainer} href="mailto: Lms@gnadenweiler.de">
           <StaticImage className={icon} alt='Icon' src="../images/email.png"/>
           <div className={buttonLink}>Send an Email</div>
@@ -80,13 +81,14 @@ const IndexPage = () => {
           <div className={buttonLink}>LinkedIn</div>
         </a>
         <a className={buttonContainer} href="https://github.com/toxillo">
-          <StaticImage className={icon} alt='Icon' src="../images/githuba.png"/>
+          <StaticImage className={icon} alt='Icon' src="../images/github.png"/>
           <div className={buttonLink}>Github</div>
         </a>
         <a className={buttonContainer} href="https://www.instagram.com/_toxillo_/">
           <StaticImage className={icon} alt='Icon' src="../images/instagram.png"/>
           <div className={buttonLink}>Instagram</div>
         </a>
+        </div>
       </section>
     </Layout>
   )
