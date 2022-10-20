@@ -11,12 +11,12 @@ const shortcodes = { MDXImage }
 const BlogPost = ({ data, children }) => {
   return (
     <Layout>
-      <div className={mainContent}>
+      <section className={mainContent}>
         <h1>{data.mdx.frontmatter.title}</h1>
         <MDXProvider components={shortcodes}>
           {children}
         </MDXProvider>
-      </div>
+      </section>
     </Layout>
   )
 }

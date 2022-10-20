@@ -56,7 +56,7 @@ p {
     font-size: $text-size;
     line-height: $text-size + 0.5em;
     text-align: center;
-    padding: 0 3em;
+    padding: 0 1.5em;
 }
 
 ::-webkit-scrollbar {
@@ -92,11 +92,13 @@ p {
 }
 
 .hero-title {
-    margin: 0
+    margin: 0;
+    text-align: left;
 }
 
 .hero-subtitle {
-    font-family: $font-stack;
+    padding: 0;
+    text-align: left;
 }
 
 .hero-graphic-container {
@@ -121,6 +123,7 @@ p {
 .icon {
     width: 32px;
     height: 32px;
+    margin-right: 1em;
 }
 
 .buttons-container {
@@ -133,9 +136,8 @@ p {
     background-color: aquamarine;
     border-radius: 10px;
     display: flex;
-    gap: 2em;
-    padding: 1em;
-    padding-left: 4em;
+    gap: 1.5em;
+    padding: 1em 1.5em;
     align-items: center;
     
     img {
@@ -172,11 +174,11 @@ p {
     }
     
     ::-webkit-scrollbar-track {
-        border-right: 6px rgba(0, 0, 0, 0) solid;
+        border-right: 7px rgba(0, 0, 0, 0) solid;
     }
     
     ::-webkit-scrollbar-thumb {
-        border-right: 6px rgba(0, 0, 0, 0) solid;
+        border-right: 7px rgba(0, 0, 0, 0) solid;
     }
 
     .hero-container {
@@ -194,7 +196,7 @@ p {
     .button-container {
         padding: 1em;
         width: 100%;
-        justify-content: space-evenly;
+        justify-content: center;
         gap: 0;
     }
 
