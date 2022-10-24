@@ -8,23 +8,26 @@ document.addEventListener('scroll', (e) => {
     if (window.scrollY == 0) nav.style.display = 'none'; else nav.style.display = 'block';
     Array.from(fading).forEach(item => {
         var pos = item.getBoundingClientRect();
-        var height = item.clientHeight;
-        var opacity = (pos.top) / 100
-        console.log(pos.top)
-        item.style.opacity = opacity
+        var opacity = pos.top + (pos.height / 2) - (window.innerHeight / 2) + 50;
+        console.log("first: " + opacity);
+        if (pos.top < window.innerHeight && pos.bottom > 0) {
+            if ((pos.top + (pos.height / 2)) < window.innerHeight / 2) {
+                opacity *= -1;
+            }
+        } else {
+            opacity = 0;
+        }
+        console.log(opacity);
+        opacity = 1 - norm(opacity, window.innerHeight / 2, 0);
+        // if (opacity > 0.80) opacity = 1;
+        item.style.opacity = opacity;
     })
-    // var scrollPercent = (heroHeight - window.scrollY) / heroHeight;
-    // if (scrollPercent < 0.05) {
-    //     scrollPercent = 0
-    // }
+    var scrollPercent = (heroHeight - window.scrollY) / heroHeight;
+    if (scrollPercent < 0.05) {
+        scrollPercent = 0
+    }
 
-    // hero.style.opacity = scrollPercent;
-    // nav.style.opacity = 1 - scrollPercent;
-
-    // if (window.scrollY >= window.innerHeight) {
-    //     var opacity = Math.min(1, (window.scrollY - window.innerHeight) / 500);
-    //     projects.style.opacity = opacity;
-    // } else {
-    //     projects.style.opacity = 0;
-    // }
+    nav.style.opacity = 1 - scrollPercent;
 });
+
+function norm(val, max, min) { return (val - min) / (max - min); }
