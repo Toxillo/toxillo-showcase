@@ -1,54 +1,42 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Nuxt 3 Minimal Starter
 
-## 🚀 Quick start
+Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
-1.  **Create a Gatsby site.**
+## Setup
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+Make sure to install the dependencies:
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+```bash
+# yarn
+yarn install
 
-2.  **Start developing.**
+# npm
+npm install
 
-    Navigate into your new site’s directory and start it up.
+# pnpm
+pnpm install --shamefully-hoist
+```
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Development Server
 
-3.  **Open the code and start customizing!**
+Start the development server on http://localhost:3000
 
-    Your site is now running at http://localhost:8000!
+```bash
+npm run dev
+```
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+## Production
 
-4.  **Learn more**
+Build the application for production:
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```bash
+npm run build
+```
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Locally preview production build:
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```bash
+npm run preview
+```
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
