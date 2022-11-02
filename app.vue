@@ -1,39 +1,41 @@
 <template>
-  <div>
     <header id=header>
-		<nav class=main-header>
-			<ul class=main-nav-items>
-				<li id=main-nav-heading class=main-nav-item>
-					<a href="/">Me</a>
-				</li>
-				<li class=main-nav-item>
-					<a href="/#projects">Projects</a>
-				</li>
-				<li class=main-nav-item>
-					<a href="/#about">About</a>
-				</li>
-				<li class=main-nav-item>
-					<a href="/#contact">Contact</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
-	<section>
-		<div id=hero-container class="hero-container" >
-			<div class="hero fading">
-				<h1 class=hero-title>
-					Leon Stier
-				</h1>
-				<h2 class=hero-subtitle>
-					Game Developer
-				</h2>
-			</div>
-		</div>
-	</section>
-  </div>
+        <nav class=main-header>
+            <ul class=main-nav-items>
+                <li id=main-nav-heading class=main-nav-item>
+                    <a href="/">Me</a>
+                </li>
+                <li class=main-nav-item>
+                    <a href="/#projects">Projects</a>
+                </li>
+                <li class=main-nav-item>
+                    <a href="/#about">About</a>
+                </li>
+                <li class=main-nav-item>
+                    <a href="/#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div >
+        <section>
+            <div id=hero-container class="hero-container">
+                <div class="hero fading">
+                    <h1 class=hero-title>
+                        Leon Stier
+                    </h1>
+                    <h2 class=hero-subtitle>
+                        Game Developer
+                    </h2>
+                </div>
+            </div>
+        </section>
+    </div>
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&display=swap');
+
 * {
     box-sizing: border-box;
     text-align: center;
@@ -121,8 +123,7 @@ header {
     height: 100vh;
 }
 
-.hero {
-}
+.hero {}
 
 .hero-title {
     margin: 0;
@@ -149,4 +150,27 @@ header {
     border-radius: 10px
 }
 
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 3.5em;
+    }
+
+    p {
+        font-size: 1.6em;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hero-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
 </style>
