@@ -44,13 +44,13 @@ const IndexPage = () => {
               I am working on this site right now
             </p>
           </div>
-          <div className={heroGraphicContainer}>
+          <a href="https://www.artstation.com/toxillo" className={heroGraphicContainer}>
             <StaticImage
               className={heroGraphic}
               alt="Orb"
               src="../images/square.jpg"
             />
-          </div>
+          </a>
         </div>
       </section>
       <section id="projects">
