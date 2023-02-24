@@ -70,6 +70,9 @@ const IndexPage = () => {
           web and mobile app development. I built this site to have a central place to showcase my finished projects,
           what I'm working on and how to contact me, but also to learn more about building complex websites.
         </p>
+          <a className={buttonContainer} href="/cv">
+          <div className={buttonLink}>Check out my CV</div>
+          </a>         
       </section>
       <section id="contact">
         <h1>Contact</h1>
