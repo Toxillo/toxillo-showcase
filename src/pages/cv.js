@@ -14,7 +14,7 @@ const CVPage = () => {
   return (
     <Layout>
       <section>
-        <StaticImage className={imageBig} alt='cv' src='../images/cv_current.png'/>
+        <StaticImage className={imageBig} alt='cv' src='../images/CV_current.png'/>
         <a className={buttonContainer} href={cv} download={true}>
           <div className={buttonLink}>Download</div>
         </a> 
